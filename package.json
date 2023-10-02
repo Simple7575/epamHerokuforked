@@ -1,0 +1,30 @@
+{
+  "name": "epamherokuhometask",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "type":"module",
+
+  "scripts": {
+    "test": "wdio wdio.conf.js",
+    "lint": "eslint .",
+    "coverage": "c8 npm test && c8 report --reporter=text-summary",
+    "mochawesome": "marge ./reports/*.json -f report.html && open report.html"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "@wdio/local-runner": "^8.16.18",
+    "@wdio/mocha-framework": "^8.16.17",
+    "@wdio/spec-reporter": "^8.16.17",
+    "c8": "^8.0.1",
+    "eslint": "^8.50.0",
+    "eslint-config-google": "^0.14.0",
+    "mocha": "^10.2.0",
+    "mochawesome": "^7.1.3",
+    "mochawesome-merge": "^4.3.0",
+    "mochawesome-report-generator": "^6.2.0",
+    "wdio-mochawesome-reporter": "^4.0.0"
+  }
+}
