@@ -1,14 +1,20 @@
 {
     "env": {
-        "browser": true,
+        "commonjs": true,
         "es2021": true,
-        "node": true
+        "node": true,
+        "mocha": true
     },
-    "extends": "google",
+    "extends": "airbnb-base",
     "parserOptions": {
-        "ecmaVersion": "latest",
-        "sourceType": "module"
+        "ecmaVersion": "latest"
     },
     "rules": {
+        "class-methods-use-this": "off",
+        "arrow-parens": "off",
+        "prefer-arrow-callback": "off",
+        "func-names": "off",
+        "object-curly-newline": "off",
+        "linebreak-style": ["error", "windows"]
     }
 }

@@ -4,7 +4,7 @@ exports.config = {
   // Runner Configuration
   // ====================
   // WebdriverIO supports running e2e tests as well as unit and component tests.
-  runner: "local",
+  runner: 'local',
   //
   // ==================
   // Specify Test Files
@@ -21,7 +21,7 @@ exports.config = {
   // then the current working directory is where your `package.json` resides, so `wdio`
   // will be called from there.
   //
-  specs: ["./test/specs/**/*.js"],
+  specs: ['./test/specs/**/*.js'],
   // Patterns to exclude.
   exclude: [
     // 'path/to/excluded/files'
@@ -51,7 +51,7 @@ exports.config = {
   capabilities: [
     {
       // capabilities for local browser web tests
-      browserName: "chrome", // or "firefox", "microsoftedge", "safari"
+      browserName: 'chrome', // or "firefox", "microsoftedge", "safari"
     },
   ],
 
@@ -62,7 +62,7 @@ exports.config = {
   // Define all options that are relevant for the WebdriverIO instance here
   //
   // Level of logging verbosity: trace | debug | info | warn | error | silent
-  logLevel: "info",
+  logLevel: 'info',
   //
   // Set specific log levels per logger
   // loggers:
@@ -86,7 +86,7 @@ exports.config = {
   // with `/`, the base url gets prepended, not including the path portion of your baseUrl.
   // If your `url` parameter starts without a scheme or `/` (like `some/path`), the base url
   // gets prepended directly.
-  baseUrl: "http://localhost",
+  baseUrl: 'http://localhost',
   //
   // Default timeout for all waitFor* commands.
   waitforTimeout: 10000,
@@ -110,7 +110,7 @@ exports.config = {
   //
   // Make sure you have the wdio adapter package for the specific framework installed
   // before running any tests.
-  framework: "mocha",
+  framework: 'mocha',
   //
   // The number of times to retry the entire specfile when it fails as a whole
   // specFileRetries: 1,
@@ -124,24 +124,26 @@ exports.config = {
   // Test reporter for stdout.
   // The only one supported by default is 'dot'
   // see also: https://webdriver.io/docs/dot-reporter
-  reporters: [
-    "spec",
-    [
-      "mochawesome",
-      {
-        outputDir: "./reports",
-        outputFileFormat: function (opts) {
-          return `results-${opts.cid}.${opts.capabilities}.json`;
-        },
-      },
-    ],
-  ],
+
+  // This part is messing things up -----------------------
+  // reporters: [
+  //   'spec',
+  //   [
+  //     'mochawesome',
+  //     {
+  //       outputDir: './reports',
+  //       outputFileFormat: function (opts) {
+  //         return `results-${opts.cid}.${opts.capabilities}.json`;
+  //       },
+  //     },
+  //   ],
+  // ],
 
   //
   // Options to be passed to Mocha.
   // See the full list at http://mochajs.org/
   mochaOpts: {
-    ui: "bdd",
+    ui: 'bdd',
     timeout: 60000,
   },
   //
